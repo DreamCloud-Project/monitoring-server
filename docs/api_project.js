@@ -1,9 +1,9 @@
 define({
   "name": "monitoring-server",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "RESTful services for the ATOM monitoring framework",
   "title": "DreamCloud RESTful API",
-  "url": "http://mf.excess-project.eu:3030/v2/dreamcloud/mf",
+  "url": "http://mf.excess-project.eu:3030/v1/dreamcloud/mf",
   "header": {
     "title": "DreamCloud API"
   },
@@ -29,7 +29,7 @@ define({
   "apidoc": "0.2.0",
   "generator": {
     "name": "apidoc",
-    "time": "2016-08-18T09:03:47.480Z",
+    "time": "2016-08-18T09:58:26.853Z",
     "url": "http://apidocjs.com",
     "version": "0.16.1"
   }

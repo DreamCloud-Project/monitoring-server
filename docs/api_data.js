@@ -3,7 +3,7 @@ define({ "api": [
     "type": "get",
     "url": "/deployments/:workflowID/:taskID/:platformID",
     "title": "3. Return available deployment plans",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "GetDeployments",
     "group": "Deployment_Plans",
     "parameter": {
@@ -36,7 +36,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/deployments/ms2/t2.1/excesscluster",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/deployments/ms2/t2.1/excesscluster",
         "type": "curl"
       }
     ],
@@ -62,7 +62,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n  \"cf8ba177b43e4a837c4c213f6a149ead4f1ec9ef2e976306a07711e88bf6c60c\": {\n     \"href\": \"http://mf.excess-project.eu:3030/v2/dreamcloud/mf/deployments/ms2/t2.1/excesscluster/cf8ba177b43e4a837c4c213f6a149ead4f1ec9ef2e976306a07711e88bf6c60c\"\n  },\n  \"e57d089e2cc396f04d277aa35c399b4a5af5b56f65682b4f4952dd7f334a2c15\": {\n     \"href\": \"http://mf.excess-project.eu:3030/v2/dreamcloud/mf/deployments/ms2/t2.1/excesscluster/e57d089e2cc396f04d277aa35c399b4a5af5b56f65682b4f4952dd7f334a2c15\"\n  },\n  \"d6d33f5097e23e55659aba9004dbeb257970926e3927a01c10ff431fe48555e9\": {\n     \"href\": \"http://mf.excess-project.eu:3030/v2/dreamcloud/mf/deployments/ms2/t2.1/excesscluster/d6d33f5097e23e55659aba9004dbeb257970926e3927a01c10ff431fe48555e9\"\n  },\n  \"79f2e72501da8a8bcff9d6cd711b44a0fe8174a751e897c51ef7a7d110b925d8\": {\n     \"href\": \"http://mf.excess-project.eu:3030/v2/dreamcloud/mf/deployments/ms2/t2.1/excesscluster/79f2e72501da8a8bcff9d6cd711b44a0fe8174a751e897c51ef7a7d110b925d8\"\n  },\n  ..\n}",
+          "content": "HTTP/1.1 200 OK\n{\n  \"cf8ba177b43e4a837c4c213f6a149ead4f1ec9ef2e976306a07711e88bf6c60c\": {\n     \"href\": \"http://mf.excess-project.eu:3030/v1/dreamcloud/mf/deployments/ms2/t2.1/excesscluster/cf8ba177b43e4a837c4c213f6a149ead4f1ec9ef2e976306a07711e88bf6c60c\"\n  },\n  \"e57d089e2cc396f04d277aa35c399b4a5af5b56f65682b4f4952dd7f334a2c15\": {\n     \"href\": \"http://mf.excess-project.eu:3030/v1/dreamcloud/mf/deployments/ms2/t2.1/excesscluster/e57d089e2cc396f04d277aa35c399b4a5af5b56f65682b4f4952dd7f334a2c15\"\n  },\n  \"d6d33f5097e23e55659aba9004dbeb257970926e3927a01c10ff431fe48555e9\": {\n     \"href\": \"http://mf.excess-project.eu:3030/v1/dreamcloud/mf/deployments/ms2/t2.1/excesscluster/d6d33f5097e23e55659aba9004dbeb257970926e3927a01c10ff431fe48555e9\"\n  },\n  \"79f2e72501da8a8bcff9d6cd711b44a0fe8174a751e897c51ef7a7d110b925d8\": {\n     \"href\": \"http://mf.excess-project.eu:3030/v1/dreamcloud/mf/deployments/ms2/t2.1/excesscluster/79f2e72501da8a8bcff9d6cd711b44a0fe8174a751e897c51ef7a7d110b925d8\"\n  },\n  ..\n}",
           "type": "json"
         }
       ]
@@ -86,14 +86,14 @@ define({ "api": [
         }
       ]
     },
-    "filename": "routes/v2/dreamcloud/deployments.js",
+    "filename": "routes/v1/dreamcloud/deployments.js",
     "groupTitle": "Deployment_Plans"
   },
   {
     "type": "get",
     "url": "/deployments/:workflowID/:taskID/:platformID/:deploymentPlanID",
     "title": "2. Return a given deployment plan",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "GetExperiments",
     "group": "Deployment_Plans",
     "parameter": {
@@ -133,7 +133,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/deployments/ms2/t2.1/excesscluster/cf8ba177b43e4a837c4c213f6a149ead4f1ec9ef2e976306a07711e88bf6c60c",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/deployments/ms2/t2.1/excesscluster/cf8ba177b43e4a837c4c213f6a149ead4f1ec9ef2e976306a07711e88bf6c60c",
         "type": "curl"
       }
     ],
@@ -225,14 +225,14 @@ define({ "api": [
         }
       ]
     },
-    "filename": "routes/v2/dreamcloud/deployments.js",
+    "filename": "routes/v1/dreamcloud/deployments.js",
     "groupTitle": "Deployment_Plans"
   },
   {
     "type": "put",
     "url": "/deployments/:workflowID/:taskID/:platformID/:experimentID",
     "title": "1. Add a new deployment plan",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "PutDeployments",
     "group": "Deployment_Plans",
     "parameter": {
@@ -330,7 +330,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/deployments/ms2/t2.1/excesscluster/AVX123A3asd_S",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/deployments/ms2/t2.1/excesscluster/AVX123A3asd_S",
         "type": "curl"
       }
     ],
@@ -356,7 +356,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n  \"deployment_id\": \"da117e8171ae58b935a02a9768c21ce96ffd5f6e\"\n  \"predicted_time\": 2017\n  \"href\": \"http://mf.excess-project.eu:3030/v2/dreamcloud/mf/deployments/ms2/t2.1/test_cluster/da117e8171ae58b935a02a9768c21ce96ffd5f6e\"\n }",
+          "content": "HTTP/1.1 200 OK\n{\n  \"deployment_id\": \"da117e8171ae58b935a02a9768c21ce96ffd5f6e\"\n  \"predicted_time\": 2017\n  \"href\": \"http://mf.excess-project.eu:3030/v1/dreamcloud/mf/deployments/ms2/t2.1/test_cluster/da117e8171ae58b935a02a9768c21ce96ffd5f6e\"\n }",
           "type": "json"
         }
       ]
@@ -380,14 +380,14 @@ define({ "api": [
         }
       ]
     },
-    "filename": "routes/v2/dreamcloud/deployments.js",
+    "filename": "routes/v1/dreamcloud/deployments.js",
     "groupTitle": "Deployment_Plans"
   },
   {
     "type": "get",
     "url": "/energy/:workflowID/:experimentID",
     "title": "1. Return energy data for the given experiment ID",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "GetEnergy",
     "group": "Energy",
     "parameter": {
@@ -413,7 +413,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/h2/dreamcloud/mf/energy/ms2/AVQa1RU0GMPeuCn4_2S_",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/energy/ms2/AVQa1RU0GMPeuCn4_2S_",
         "type": "curl"
       }
     ],
@@ -483,14 +483,14 @@ define({ "api": [
         }
       ]
     },
-    "filename": "routes/v2/dreamcloud/energy.js",
+    "filename": "routes/v1/dreamcloud/energy.js",
     "groupTitle": "Energy"
   },
   {
     "type": "get",
     "url": "/energy/:workflowID/:taskID/:experimentID",
     "title": "2. Return energy data filtered by task ID",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "GetEnergyByTask",
     "group": "Energy",
     "parameter": {
@@ -523,7 +523,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/h2/dreamcloud/mf/energy/ms2/t2.1/AVQa1RU0GMPeuCn4_2S_",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/energy/ms2/t2.1/AVQa1RU0GMPeuCn4_2S_",
         "type": "curl"
       }
     ],
@@ -593,14 +593,14 @@ define({ "api": [
         }
       ]
     },
-    "filename": "routes/v2/dreamcloud/energy.js",
+    "filename": "routes/v1/dreamcloud/energy.js",
     "groupTitle": "Energy"
   },
   {
     "type": "get",
     "url": "/experiments",
     "title": "1. Returns a list of all experiment IDs",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "GetExperiments",
     "group": "Experiments",
     "parameter": {
@@ -626,7 +626,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/experiments",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/experiments",
         "type": "curl"
       }
     ],
@@ -666,7 +666,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n  \"AVZ-ll9FGYwmTvCuSnjW\": {\n     \"href\": \"http://mf.excess-project.eu:3030/v2/mf/experiments/AVZ-ll9FGYwmTvCuSnjW?workflow=ms2\"\n  },\n  \"AVZ-kZTjGYwmTvCuSnZV\": {\n     \"href\": \"http://mf.excess-project.eu:3030/v2/mf/experiments/AVZ-kZTjGYwmTvCuSnZV?workflow=ms2\"\n  },\n  \"AVZ-j2hEGYwmTvCuSnVE\": {\n     \"href\": \"http://mf.excess-project.eu:3030/v2/mf/experiments/AVZ-j2hEGYwmTvCuSnVE?workflow=ms2\"\n  },\n  ...\n}",
+          "content": "HTTP/1.1 200 OK\n{\n  \"AVZ-ll9FGYwmTvCuSnjW\": {\n     \"href\": \"http://mf.excess-project.eu:3030/v1/mf/experiments/AVZ-ll9FGYwmTvCuSnjW?workflow=ms2\"\n  },\n  \"AVZ-kZTjGYwmTvCuSnZV\": {\n     \"href\": \"http://mf.excess-project.eu:3030/v1/mf/experiments/AVZ-kZTjGYwmTvCuSnZV?workflow=ms2\"\n  },\n  \"AVZ-j2hEGYwmTvCuSnVE\": {\n     \"href\": \"http://mf.excess-project.eu:3030/v1/mf/experiments/AVZ-j2hEGYwmTvCuSnVE?workflow=ms2\"\n  },\n  ...\n}",
           "type": "json"
         }
       ]
@@ -683,14 +683,14 @@ define({ "api": [
         ]
       }
     },
-    "filename": "routes/v2/dreamcloud/experiments.js",
+    "filename": "routes/v1/dreamcloud/experiments.js",
     "groupTitle": "Experiments"
   },
   {
     "type": "get",
     "url": "/experiments/:experimentID",
     "title": "2. Request a registered experiment with given experiment ID",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "GetExperimentsID",
     "group": "Experiments",
     "parameter": {
@@ -827,7 +827,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/experiments/AVZ-ll9FGYwmTvCuSnjW?workflow=ms2",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/experiments/AVZ-ll9FGYwmTvCuSnjW?workflow=ms2",
         "type": "curl"
       }
     ],
@@ -843,14 +843,14 @@ define({ "api": [
         ]
       }
     },
-    "filename": "routes/v2/dreamcloud/experiments.js",
+    "filename": "routes/v1/dreamcloud/experiments.js",
     "groupTitle": "Experiments"
   },
   {
     "type": "post",
     "url": "/experiments/:workflowID",
     "title": "3. Create a new experiment with given workflow ID",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "PostExperiments",
     "group": "Experiments",
     "parameter": {
@@ -911,7 +911,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/v2/mf/experiments/ms2",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/mf/experiments/ms2",
         "type": "curl"
       }
     ],
@@ -937,19 +937,19 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n  \"AVXt3coOz5chEwIt8_Ma\": {\n    \"href\": \"http://mf.excess-project.eu:3030/v2/mf/experiments/AVXt3coOz5chEwIt8_Ma?workflow=ms2\"\n  }\n}",
+          "content": "HTTP/1.1 200 OK\n{\n  \"AVXt3coOz5chEwIt8_Ma\": {\n    \"href\": \"http://mf.excess-project.eu:3030/v1/mf/experiments/AVXt3coOz5chEwIt8_Ma?workflow=ms2\"\n  }\n}",
           "type": "json"
         }
       ]
     },
-    "filename": "routes/v2/dreamcloud/experiments.js",
+    "filename": "routes/v1/dreamcloud/experiments.js",
     "groupTitle": "Experiments"
   },
   {
     "type": "post",
     "url": "/metrics",
     "title": "2. Update multiple metrics at once (bulk query)",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "PostBulkMetrics",
     "group": "Metrics",
     "parameter": {
@@ -1017,7 +1017,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/metrics",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/metrics",
         "type": "curl"
       }
     ],
@@ -1036,7 +1036,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n[\n  \"http://mf.excess-project.eu:3030/v2/mf/profiles/ms2_t2.1/AVUWnydqGMPeuCn4l-cj\",\n  \"http://mf.excess-project.eu:3030/v2/mf/profiles/ms2_t2.2/AVNXMXcvGMPeuCn4bMe0\"\n]",
+          "content": "HTTP/1.1 200 OK\n[\n  \"http://mf.excess-project.eu:3030/v1/mf/profiles/ms2_t2.1/AVUWnydqGMPeuCn4l-cj\",\n  \"http://mf.excess-project.eu:3030/v1/mf/profiles/ms2_t2.2/AVNXMXcvGMPeuCn4bMe0\"\n]",
           "type": "json"
         }
       ]
@@ -1053,14 +1053,14 @@ define({ "api": [
         ]
       }
     },
-    "filename": "routes/v2/dreamcloud/metrics.js",
+    "filename": "routes/v1/dreamcloud/metrics.js",
     "groupTitle": "Metrics"
   },
   {
     "type": "post",
     "url": "/metrics/:workflowID/:experimentID",
     "title": "1. Update a single metric",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "PostMetric",
     "group": "Metrics",
     "parameter": {
@@ -1130,7 +1130,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/metrics/ms2/AVNXMXcvGMPeuCn4bMe0?task=t2.1",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/metrics/ms2/AVNXMXcvGMPeuCn4bMe0?task=t2.1",
         "type": "curl"
       }
     ],
@@ -1156,7 +1156,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n  \"AVXt3coOz5chEwIt8_Ma\": {\n    \"href\": \"http://mf.excess-project.eu:3030/v2/mf/profiles/hpcfapix/vector_scal01/AVNXMXcvGMPeuCn4bMe0\"\n  }\n}",
+          "content": "HTTP/1.1 200 OK\n{\n  \"AVXt3coOz5chEwIt8_Ma\": {\n    \"href\": \"http://mf.excess-project.eu:3030/v1/mf/profiles/hpcfapix/vector_scal01/AVNXMXcvGMPeuCn4bMe0\"\n  }\n}",
           "type": "json"
         }
       ]
@@ -1173,14 +1173,14 @@ define({ "api": [
         ]
       }
     },
-    "filename": "routes/v2/dreamcloud/metrics.js",
+    "filename": "routes/v1/dreamcloud/metrics.js",
     "groupTitle": "Metrics"
   },
   {
     "type": "get",
     "url": "/profiles/:workflowID/:taskID/:experimentID",
     "title": "3. Get profiles by workflow, task and experiment ID",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "GetProfilesExperiment",
     "group": "Profiles",
     "parameter": {
@@ -1213,7 +1213,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/profiles/ms2/t2.1/AVQ-MczMGMPeuCn4FHqi",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/profiles/ms2/t2.1/AVQ-MczMGMPeuCn4FHqi",
         "type": "curl"
       }
     ],
@@ -1291,14 +1291,14 @@ define({ "api": [
         }
       ]
     },
-    "filename": "routes/v2/dreamcloud/profiles.js",
+    "filename": "routes/v1/dreamcloud/profiles.js",
     "groupTitle": "Profiles"
   },
   {
     "type": "get",
     "url": "/profiles/:workflowID/:taskID",
     "title": "2. Get a list of experiments by workflow and task ID",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "GetProfilesTask",
     "group": "Profiles",
     "parameter": {
@@ -1324,7 +1324,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/profiles/ms2/t2.1",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/profiles/ms2/t2.1",
         "type": "curl"
       }
     ],
@@ -1357,7 +1357,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n   \"2016-06-17\": {\n      \"AVVe9xN-LeaeU4rxxTaT\": {\n         \"href\": \"http://mf.excess-project.eu:3030/v2/dreamcloud/mf/profiles/ms2/t2.1/AVVe9xN-LeaeU4rxxTaT\"\n      },\n      \"AVVejDH1LeaeU4rxwuw-\": {\n         \"href\": \"http://mf.excess-project.eu:3030/v2/dreamcloud/mf/profiles/ms2/t2.1/AVVejDH1LeaeU4rxwuw-\"\n      },\n      \"AVVeiND0LeaeU4rxwtIV\": {\n         \"href\": \"http://mf.excess-project.eu:3030/v2/dreamcloud/mf/profiles/ms2/t2.1/AVVeiND0LeaeU4rxwtIV\"\n      },\n      \"AVVeQmcUenoRsEhyFlHu\": {\n         \"href\": \"http://mf.excess-project.eu:3030/v2/dreamcloud/mf/profiles/ms2/t2.1/AVVeQmcUenoRsEhyFlHu\"\n      },\n      \"AVVeQANeenoRsEhyFjlu\": {\n         \"href\": \"http://mf.excess-project.eu:3030/v2/dreamcloud/mf/profiles/ms2/t2.1/AVVeQANeenoRsEhyFjlu\"\n      },\n      \"AVVeX5NRenoRsEhyF4We\": {\n         \"href\": \"http://mf.excess-project.eu:3030/v2/dreamcloud/mf/profiles/ms2/t2.1/AVVeX5NRenoRsEhyF4We\"\n      }\n   },\n   \"2016-04-14\": {\n      \"AVQUiW67GMPeuCn47XpS\": {\n         \"href\": \"http://mf.excess-project.eu:3030/v2/dreamcloud/mf/profiles/ms2/t2.1/AVQUiW67GMPeuCn47XpS\"\n      }\n   },\n   ...\n}",
+          "content": "HTTP/1.1 200 OK\n{\n   \"2016-06-17\": {\n      \"AVVe9xN-LeaeU4rxxTaT\": {\n         \"href\": \"http://mf.excess-project.eu:3030/v1/dreamcloud/mf/profiles/ms2/t2.1/AVVe9xN-LeaeU4rxxTaT\"\n      },\n      \"AVVejDH1LeaeU4rxwuw-\": {\n         \"href\": \"http://mf.excess-project.eu:3030/v1/dreamcloud/mf/profiles/ms2/t2.1/AVVejDH1LeaeU4rxwuw-\"\n      },\n      \"AVVeiND0LeaeU4rxwtIV\": {\n         \"href\": \"http://mf.excess-project.eu:3030/v1/dreamcloud/mf/profiles/ms2/t2.1/AVVeiND0LeaeU4rxwtIV\"\n      },\n      \"AVVeQmcUenoRsEhyFlHu\": {\n         \"href\": \"http://mf.excess-project.eu:3030/v1/dreamcloud/mf/profiles/ms2/t2.1/AVVeQmcUenoRsEhyFlHu\"\n      },\n      \"AVVeQANeenoRsEhyFjlu\": {\n         \"href\": \"http://mf.excess-project.eu:3030/v1/dreamcloud/mf/profiles/ms2/t2.1/AVVeQANeenoRsEhyFjlu\"\n      },\n      \"AVVeX5NRenoRsEhyF4We\": {\n         \"href\": \"http://mf.excess-project.eu:3030/v1/dreamcloud/mf/profiles/ms2/t2.1/AVVeX5NRenoRsEhyF4We\"\n      }\n   },\n   \"2016-04-14\": {\n      \"AVQUiW67GMPeuCn47XpS\": {\n         \"href\": \"http://mf.excess-project.eu:3030/v1/v1/dreamcloud/mf/profiles/ms2/t2.1/AVQUiW67GMPeuCn47XpS\"\n      }\n   },\n   ...\n}",
           "type": "json"
         }
       ]
@@ -1381,14 +1381,14 @@ define({ "api": [
         }
       ]
     },
-    "filename": "routes/v2/dreamcloud/profiles.js",
+    "filename": "routes/v1/dreamcloud/profiles.js",
     "groupTitle": "Profiles"
   },
   {
     "type": "get",
     "url": "/profiles/:workflowID",
     "title": "1. Get a list of profiled tasks associated with the given workflow ID",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "GetProfilesWorkflow",
     "group": "Profiles",
     "parameter": {
@@ -1407,7 +1407,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/profiles/ms2",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/profiles/ms2",
         "type": "curl"
       }
     ],
@@ -1440,7 +1440,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n   \"t2.5\": {\n      \"AVYoZ31mLeaeU4rxUm0O\": {\n         \"href\": \"http://mf.excess-project.eu:3030/v2/dreamcloud/mf/profiles/ms2/t2.5/AVYoZ31mLeaeU4rxUm0O\"\n      },\n      \"AVVuCj1kLeaeU4rxxT4d\": {\n         \"href\": \"http://mf.excess-project.eu:3030/v2/dreamcloud/mf/profiles/ms2/t2.5/AVVuCj1kLeaeU4rxxT4d\"\n      }\n   },\n   \"t2.4\": {\n      \"AVQtI20EGMPeuCn4A_V3\": {\n         \"href\": \"http://mf.excess-project.eu:3030/v2/dreamcloud/mf/profiles/ms2/t2.4/AVQtI20EGMPeuCn4A_V3\"\n      },\n      \"AVQ-HJxhGMPeuCn4E_u6\": {\n         \"href\": \"http://mf.excess-project.eu:3030/v2/dreamcloud/mf/profiles/ms2/t2.4/AVQ-HJxhGMPeuCn4E_u6\"\n      }\n   },\n   ...\n}",
+          "content": "HTTP/1.1 200 OK\n{\n   \"t2.5\": {\n      \"AVYoZ31mLeaeU4rxUm0O\": {\n         \"href\": \"http://mf.excess-project.eu:3030/v1/dreamcloud/mf/profiles/ms2/t2.5/AVYoZ31mLeaeU4rxUm0O\"\n      },\n      \"AVVuCj1kLeaeU4rxxT4d\": {\n         \"href\": \"http://mf.excess-project.eu:3030/v1/dreamcloud/mf/profiles/ms2/t2.5/AVVuCj1kLeaeU4rxxT4d\"\n      }\n   },\n   \"t2.4\": {\n      \"AVQtI20EGMPeuCn4A_V3\": {\n         \"href\": \"http://mf.excess-project.eu:3030/v1/dreamcloud/mf/profiles/ms2/t2.4/AVQtI20EGMPeuCn4A_V3\"\n      },\n      \"AVQ-HJxhGMPeuCn4E_u6\": {\n         \"href\": \"http://mf.excess-project.eu:3030/v1/dreamcloud/mf/profiles/ms2/t2.4/AVQ-HJxhGMPeuCn4E_u6\"\n      }\n   },\n   ...\n}",
           "type": "json"
         }
       ]
@@ -1464,14 +1464,14 @@ define({ "api": [
         }
       ]
     },
-    "filename": "routes/v2/dreamcloud/profiles.js",
+    "filename": "routes/v1/dreamcloud/profiles.js",
     "groupTitle": "Profiles"
   },
   {
     "type": "get",
     "url": "/progress/:workflowID/:taskID/:experimentID",
     "title": "1. Get progress information for a given experiment",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "GetProgress",
     "group": "Progress",
     "parameter": {
@@ -1504,7 +1504,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/progress/ms2/t2.1/AVQ-MczMGMPeuCn4FHqi\ncurl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/progress/ms2/t2.1/AVQ-MczMGMPeuCn4FHqi?latest",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/progress/ms2/t2.1/AVQ-MczMGMPeuCn4FHqi\ncurl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/progress/ms2/t2.1/AVQ-MczMGMPeuCn4FHqi?latest",
         "type": "curl"
       }
     ],
@@ -1582,14 +1582,14 @@ define({ "api": [
         }
       ]
     },
-    "filename": "routes/v2/dreamcloud/progress.js",
+    "filename": "routes/v1/dreamcloud/progress.js",
     "groupTitle": "Progress"
   },
   {
     "type": "get",
     "url": "/report/:workflowID/:experimentID",
     "title": "1. Get experiment report",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "GetReport",
     "group": "Reports",
     "parameter": {
@@ -1615,7 +1615,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/report/ms2/AVQ-MczMGMPeuCn4FHqi",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/report/ms2/AVQ-MczMGMPeuCn4FHqi",
         "type": "curl"
       }
     ],
@@ -1798,14 +1798,14 @@ define({ "api": [
         }
       ]
     },
-    "filename": "routes/v2/dreamcloud/report.js",
+    "filename": "routes/v1/dreamcloud/report.js",
     "groupTitle": "Reports"
   },
   {
     "type": "get",
     "url": "/summary/:workflowID/:taskID/:platformID",
     "title": "2. Get summary including statistics",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "GetSummary",
     "group": "Reports",
     "parameter": {
@@ -1838,7 +1838,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/summary/ms2/t2.1/excesscluster",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/summary/ms2/t2.1/excesscluster",
         "type": "curl"
       }
     ],
@@ -2014,14 +2014,14 @@ define({ "api": [
         }
       ]
     },
-    "filename": "routes/v2/dreamcloud/summary.js",
+    "filename": "routes/v1/dreamcloud/summary.js",
     "groupTitle": "Reports"
   },
   {
     "type": "get",
     "url": "/summary/:workflowID/:taskID/:platformID/:deploymentID",
     "title": "3. Get summary filtered by deployment ID",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "GetSummaryByID",
     "group": "Reports",
     "parameter": {
@@ -2061,7 +2061,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/summary/ms2/t2.1/test_cluster/4e165a82309000fd5a6ab20c097b2e9f2ba5216d",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/summary/ms2/t2.1/test_cluster/4e165a82309000fd5a6ab20c097b2e9f2ba5216d",
         "type": "curl"
       }
     ],
@@ -2237,20 +2237,20 @@ define({ "api": [
         }
       ]
     },
-    "filename": "routes/v2/dreamcloud/summary.js",
+    "filename": "routes/v1/dreamcloud/summary.js",
     "groupTitle": "Reports"
   },
   {
     "type": "get",
     "url": "/resources/:platformID",
     "title": "2. Get resource information for a given platform",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "GetResource",
     "group": "Resources",
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/resources/excesscluster",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/resources/excesscluster",
         "type": "curl"
       }
     ],
@@ -2267,7 +2267,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n   \"href\": \"http://mf.excess-project.eu:3030/v2/dreamcloud/mf/resources/excesscluster\"\n}",
+          "content": "HTTP/1.1 200 OK\n{\n   \"href\": \"http://mf.excess-project.eu:3030/v1/dreamcloud/mf/resources/excesscluster\"\n}",
           "type": "json"
         }
       ]
@@ -2291,20 +2291,20 @@ define({ "api": [
         }
       ]
     },
-    "filename": "routes/v2/dreamcloud/resources.js",
+    "filename": "routes/v1/dreamcloud/resources.js",
     "groupTitle": "Resources"
   },
   {
     "type": "get",
     "url": "/resources",
     "title": "1. Get a list of available resources by target platform",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "GetResources",
     "group": "Resources",
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/resources",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/resources",
         "type": "curl"
       }
     ],
@@ -2312,7 +2312,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Request-Example:",
-          "content": "{\n   \"alexlaptop\": {\n      \"href\": \"http://mf.excess-project.eu:3030/v2/dreamcloud/mf/resources/alexlaptop\"\n   },\n   \"amitlaptop\": {\n      \"href\": \"http://mf.excess-project.eu:3030/v2/dreamcloud/mf/resources/amitlaptop\"\n   },\n   \"excesscluster\": {\n      \"href\": \"http://mf.excess-project.eu:3030/v2/dreamcloud/mf/resources/excesscluster\"\n   }\n}",
+          "content": "{\n   \"alexlaptop\": {\n      \"href\": \"http://mf.excess-project.eu:3030/v1/dreamcloud/mf/resources/alexlaptop\"\n   },\n   \"amitlaptop\": {\n      \"href\": \"http://mf.excess-project.eu:3030/v1/dreamcloud/mf/resources/amitlaptop\"\n   },\n   \"excesscluster\": {\n      \"href\": \"http://mf.excess-project.eu:3030/v1/dreamcloud/mf/resources/excesscluster\"\n   }\n}",
           "type": "json"
         }
       ]
@@ -2321,7 +2321,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n   \"href\": \"http://mf.excess-project.eu:3030/v2/dreamcloud/mf/resources\"\n}",
+          "content": "HTTP/1.1 200 OK\n{\n   \"href\": \"http://mf.excess-project.eu:3030/v1/dreamcloud/mf/resources\"\n}",
           "type": "json"
         }
       ]
@@ -2345,20 +2345,20 @@ define({ "api": [
         }
       ]
     },
-    "filename": "routes/v2/dreamcloud/resources.js",
+    "filename": "routes/v1/dreamcloud/resources.js",
     "groupTitle": "Resources"
   },
   {
     "type": "put",
     "url": "/resources/:platformID",
     "title": "3. Add resource information for a given platform",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "PutResource",
     "group": "Resources",
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/resources/excesscluster",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/resources/excesscluster",
         "type": "curl"
       }
     ],
@@ -2390,14 +2390,14 @@ define({ "api": [
         }
       ]
     },
-    "filename": "routes/v2/dreamcloud/resources.js",
+    "filename": "routes/v1/dreamcloud/resources.js",
     "groupTitle": "Resources"
   },
   {
     "type": "get",
     "url": "/runtime/:workflowID/:taskID/:experimentID",
     "title": "1. Get the runtime of a specific task",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "GetRuntime",
     "group": "Runtime",
     "parameter": {
@@ -2430,7 +2430,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/runtime/ms2/t2.1/AVZ-5cqVGYwmTvCuSqZC",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/runtime/ms2/t2.1/AVZ-5cqVGYwmTvCuSqZC",
         "type": "curl"
       }
     ],
@@ -2494,14 +2494,14 @@ define({ "api": [
         }
       ]
     },
-    "filename": "routes/v2/dreamcloud/runtime.js",
+    "filename": "routes/v1/dreamcloud/runtime.js",
     "groupTitle": "Runtime"
   },
   {
     "type": "get",
     "url": "/runtime/:workflowID/:experimentID",
     "title": "2. Get runtime information of an entire experiment",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "GetRuntimeByExperiment",
     "group": "Runtime",
     "parameter": {
@@ -2527,7 +2527,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/runtime/ms2/AVZ-5cqVGYwmTvCuSqZC",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/runtime/ms2/AVZ-5cqVGYwmTvCuSqZC",
         "type": "curl"
       }
     ],
@@ -2612,14 +2612,14 @@ define({ "api": [
         }
       ]
     },
-    "filename": "routes/v2/dreamcloud/runtime.js",
+    "filename": "routes/v1/dreamcloud/runtime.js",
     "groupTitle": "Runtime"
   },
   {
     "type": "get",
     "url": "/statistics/:workflowID",
     "title": "1. Get statistics on a metric across all tasks",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "GetStats",
     "group": "Statistics",
     "parameter": {
@@ -2666,7 +2666,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i 'http://mf.excess-project.eu:3030/v2/mf/statistics/ms2?metric=CPU0::PAPI_TOT_CYC'",
+        "content": "curl -i 'http://mf.excess-project.eu:3030/v1/mf/statistics/ms2?metric=CPU0::PAPI_TOT_CYC'",
         "type": "curl"
       }
     ],
@@ -2825,7 +2825,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n   \"workflow\": {\n      \"href\": \"http://mf.excess-project.eu:3030/v2/dreamcloud/mf/workflows/ms2\"\n   },\n   \"metric\": \"CPU0::PAPI_TOT_CYC\",\n   \"statistics\": {\n      \"count\": 314,\n      \"min\": 2188289,\n      \"max\": 140712658075784,\n      \"avg\": 27784198121927.688,\n      \"sum\": 8724238210285294,\n      \"sum_of_squares\": 1.2276032329935587e+30,\n      \"variance\": 3.1376027710066886e+27,\n      \"std_deviation\": 56014308627409.555,\n      \"std_deviation_bounds\": {\n         \"upper\": 139812815376746.8,\n         \"lower\": -84244419132891.42\n      }\n   },\n   \"min\": {\n      \"@timestamp\": \"2016-05-17T16:25:48.123\",\n      \"host\": \"node01.excess-project.eu\",\n      \"task\": \"t2.1\",\n      \"type\": \"performance\",\n      \"CPU0::PAPI_FP_INS\": 869,\n      \"CPU0::PAPI_TOT_CYC\": 2188289,\n      \"CPU1::PAPI_FP_INS\": 891,\n      \"CPU1::PAPI_TOT_CYC\": 1214959,\n      \"CPU2::PAPI_FP_INS\": 8126,\n      ...\n   },\n   \"max\": {\n      ...\n   }\n}",
+          "content": "HTTP/1.1 200 OK\n{\n   \"workflow\": {\n      \"href\": \"http://mf.excess-project.eu:3030/v1/dreamcloud/mf/workflows/ms2\"\n   },\n   \"metric\": \"CPU0::PAPI_TOT_CYC\",\n   \"statistics\": {\n      \"count\": 314,\n      \"min\": 2188289,\n      \"max\": 140712658075784,\n      \"avg\": 27784198121927.688,\n      \"sum\": 8724238210285294,\n      \"sum_of_squares\": 1.2276032329935587e+30,\n      \"variance\": 3.1376027710066886e+27,\n      \"std_deviation\": 56014308627409.555,\n      \"std_deviation_bounds\": {\n         \"upper\": 139812815376746.8,\n         \"lower\": -84244419132891.42\n      }\n   },\n   \"min\": {\n      \"@timestamp\": \"2016-05-17T16:25:48.123\",\n      \"host\": \"node01.excess-project.eu\",\n      \"task\": \"t2.1\",\n      \"type\": \"performance\",\n      \"CPU0::PAPI_FP_INS\": 869,\n      \"CPU0::PAPI_TOT_CYC\": 2188289,\n      \"CPU1::PAPI_FP_INS\": 891,\n      \"CPU1::PAPI_TOT_CYC\": 1214959,\n      \"CPU2::PAPI_FP_INS\": 8126,\n      ...\n   },\n   \"max\": {\n      ...\n   }\n}",
           "type": "json"
         }
       ]
@@ -2849,14 +2849,14 @@ define({ "api": [
         }
       ]
     },
-    "filename": "routes/v2/dreamcloud/statistics.js",
+    "filename": "routes/v1/dreamcloud/statistics.js",
     "groupTitle": "Statistics"
   },
   {
     "type": "get",
     "url": "/statistics/:workflowID/:taskID",
     "title": "2. Get statistics on a metric filtered by task ID",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "GetStatsTask",
     "group": "Statistics",
     "parameter": {
@@ -2910,7 +2910,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i 'http://mf.excess-project.eu:3030/v2/mf/statistics/ms2/t2.1?metric=CPU0::PAPI_TOT_CYC'",
+        "content": "curl -i 'http://mf.excess-project.eu:3030/v1/mf/statistics/ms2/t2.1?metric=CPU0::PAPI_TOT_CYC'",
         "type": "curl"
       }
     ],
@@ -3069,7 +3069,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n   \"workflow\": {\n      \"href\": \"http://mf.excess-project.eu:3030/v2/dreamcloud/mf/workflows/ms2\"\n   },\n   \"metric\": \"CPU0::PAPI_TOT_CYC\",\n   \"statistics\": {\n      \"count\": 314,\n      \"min\": 2188289,\n      \"max\": 140712658075784,\n      \"avg\": 27784198121927.688,\n      \"sum\": 8724238210285294,\n      \"sum_of_squares\": 1.2276032329935587e+30,\n      \"variance\": 3.1376027710066886e+27,\n      \"std_deviation\": 56014308627409.555,\n      \"std_deviation_bounds\": {\n         \"upper\": 139812815376746.8,\n         \"lower\": -84244419132891.42\n      }\n   },\n   \"min\": {\n      \"@timestamp\": \"2016-05-17T16:25:48.123\",\n      \"host\": \"node01.excess-project.eu\",\n      \"task\": \"t2.1\",\n      \"type\": \"performance\",\n      \"CPU0::PAPI_FP_INS\": 869,\n      \"CPU0::PAPI_TOT_CYC\": 2188289,\n      \"CPU1::PAPI_FP_INS\": 891,\n      \"CPU1::PAPI_TOT_CYC\": 1214959,\n      \"CPU2::PAPI_FP_INS\": 8126,\n      ...\n   },\n   \"max\": {\n      ...\n   }\n}",
+          "content": "HTTP/1.1 200 OK\n{\n   \"workflow\": {\n      \"href\": \"http://mf.excess-project.eu:3030/v1/dreamcloud/mf/workflows/ms2\"\n   },\n   \"metric\": \"CPU0::PAPI_TOT_CYC\",\n   \"statistics\": {\n      \"count\": 314,\n      \"min\": 2188289,\n      \"max\": 140712658075784,\n      \"avg\": 27784198121927.688,\n      \"sum\": 8724238210285294,\n      \"sum_of_squares\": 1.2276032329935587e+30,\n      \"variance\": 3.1376027710066886e+27,\n      \"std_deviation\": 56014308627409.555,\n      \"std_deviation_bounds\": {\n         \"upper\": 139812815376746.8,\n         \"lower\": -84244419132891.42\n      }\n   },\n   \"min\": {\n      \"@timestamp\": \"2016-05-17T16:25:48.123\",\n      \"host\": \"node01.excess-project.eu\",\n      \"task\": \"t2.1\",\n      \"type\": \"performance\",\n      \"CPU0::PAPI_FP_INS\": 869,\n      \"CPU0::PAPI_TOT_CYC\": 2188289,\n      \"CPU1::PAPI_FP_INS\": 891,\n      \"CPU1::PAPI_TOT_CYC\": 1214959,\n      \"CPU2::PAPI_FP_INS\": 8126,\n      ...\n   },\n   \"max\": {\n      ...\n   }\n}",
           "type": "json"
         }
       ]
@@ -3093,14 +3093,14 @@ define({ "api": [
         }
       ]
     },
-    "filename": "routes/v2/dreamcloud/statistics.js",
+    "filename": "routes/v1/dreamcloud/statistics.js",
     "groupTitle": "Statistics"
   },
   {
     "type": "get",
     "url": "/runtime/:workflowID/:experimentID",
     "title": "1. Get status report",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "GetStatus",
     "group": "Status",
     "description": "<p>Returns available data that was previously stored in the database. The body of the response is user-specific, and can represent any valid JSON document.</p>",
@@ -3134,7 +3134,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/ms2/AVZ_VlqVGYwmTvCuTZLX",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/ms2/AVZ_VlqVGYwmTvCuTZLX",
         "type": "curl"
       }
     ],
@@ -3166,14 +3166,14 @@ define({ "api": [
         }
       ]
     },
-    "filename": "routes/v2/dreamcloud/status.js",
+    "filename": "routes/v1/dreamcloud/status.js",
     "groupTitle": "Status"
   },
   {
     "type": "put",
     "url": "/runtime/:workflowID/:experimentID",
     "title": "1. Create/Update status report",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "PutStatus",
     "group": "Status",
     "description": "<p>Create or update a status report for the given workflow and experiment. The body of the request is user-specific, and can include any valid JSON document.</p>",
@@ -3200,7 +3200,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/status/ms2/AVZ_VlqVGYwmTvCuTZLX",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/status/ms2/AVZ_VlqVGYwmTvCuTZLX",
         "type": "curl"
       }
     ],
@@ -3208,7 +3208,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n  \"href\": \"http://mf.excess-project.eu:3030/v2/dreamcloud/mf/ms2/AVZ_VlqVGYwmTvCuTZLX\"\n}",
+          "content": "HTTP/1.1 200 OK\n{\n  \"href\": \"http://mf.excess-project.eu:3030/v1/dreamcloud/mf/ms2/AVZ_VlqVGYwmTvCuTZLX\"\n}",
           "type": "json"
         }
       ]
@@ -3232,14 +3232,14 @@ define({ "api": [
         }
       ]
     },
-    "filename": "routes/v2/dreamcloud/status.js",
+    "filename": "routes/v1/dreamcloud/status.js",
     "groupTitle": "Status"
   },
   {
     "type": "get",
     "url": "/workflows/:workflowID",
     "title": "2. Get information about a specific workflow",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "GetWorkflow",
     "group": "Workflows",
     "parameter": {
@@ -3258,7 +3258,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/workflows/ms2",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/workflows/ms2",
         "type": "curl"
       }
     ],
@@ -3343,14 +3343,14 @@ define({ "api": [
         }
       ]
     },
-    "filename": "routes/v2/dreamcloud/workflows.js",
+    "filename": "routes/v1/dreamcloud/workflows.js",
     "groupTitle": "Workflows"
   },
   {
     "type": "get",
     "url": "/workflows",
     "title": "3. Request a list of registered workflows",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "GetWorkflows",
     "group": "Workflows",
     "success": {
@@ -3375,7 +3375,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n  \"hpcdhopp\": {\n    \"href\": \"http://mf.excess-project.eu:3030/v2/dreamcloud/mf/workflows/hpcdhopp\"\n  },\n  \"hpcdkhab\": {\n    \"href\": \"http://mf.excess-project.eu:3030/v2/dreamcloud/mf/workflows/hpcdkhab\"\n  },\n  \"hpcfapix\": {\n    \"href\": \"http://mf.excess-project.eu:3030/v2/dreamcloud/mf/workflows/hpcfapix\"\n  }\n}",
+          "content": "HTTP/1.1 200 OK\n{\n  \"hpcdhopp\": {\n    \"href\": \"http://mf.excess-project.eu:3030/v1/dreamcloud/mf/workflows/hpcdhopp\"\n  },\n  \"hpcdkhab\": {\n    \"href\": \"http://mf.excess-project.eu:3030/v1/dreamcloud/mf/workflows/hpcdkhab\"\n  },\n  \"hpcfapix\": {\n    \"href\": \"http://mf.excess-project.eu:3030/v1/dreamcloud/mf/workflows/hpcfapix\"\n  }\n}",
           "type": "json"
         }
       ]
@@ -3383,7 +3383,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/workflows",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/workflows",
         "type": "curl"
       }
     ],
@@ -3406,20 +3406,20 @@ define({ "api": [
         }
       ]
     },
-    "filename": "routes/v2/dreamcloud/workflows.js",
+    "filename": "routes/v1/dreamcloud/workflows.js",
     "groupTitle": "Workflows"
   },
   {
     "type": "put",
     "url": "/workflows",
     "title": "4. Register a new workflow and create a new experiment",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "PutWorkflow",
     "group": "Workflows",
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/workflows",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/workflows",
         "type": "curl"
       }
     ],
@@ -3535,7 +3535,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n  \"workflow\": {\n    \"id\":   \"ms2\",\n    \"href\": \"http://mf.excess-project.eu:3030/v2/workflows/ms2\"\n  },\n  \"experiment\": {\n    \"id\":   \"AVXotMWFA9kSggr_MSq2\",\n    \"href\": \"http://mf.excess-project.eu:3030/v2/experiments/AVXotMWFA9kSggr_MSq2?workflow=ms2\"\n  }\n}",
+          "content": "HTTP/1.1 200 OK\n{\n  \"workflow\": {\n    \"id\":   \"ms2\",\n    \"href\": \"http://mf.excess-project.eu:3030/v1/workflows/ms2\"\n  },\n  \"experiment\": {\n    \"id\":   \"AVXotMWFA9kSggr_MSq2\",\n    \"href\": \"http://mf.excess-project.eu:3030/v1/experiments/AVXotMWFA9kSggr_MSq2?workflow=ms2\"\n  }\n}",
           "type": "json"
         }
       ]
@@ -3570,14 +3570,14 @@ define({ "api": [
         }
       ]
     },
-    "filename": "routes/v2/dreamcloud/workflows.js",
+    "filename": "routes/v1/dreamcloud/workflows.js",
     "groupTitle": "Workflows"
   },
   {
     "type": "put",
     "url": "/workflows/:workflowID",
     "title": "1. Register a new workflow with a custom ID",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "PutWorkflowID",
     "group": "Workflows",
     "parameter": {
@@ -3652,7 +3652,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/workflows/ms2",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/workflows/ms2",
         "type": "curl"
       }
     ],
@@ -3671,7 +3671,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n  \"href\": \"http://mf.excess-project.eu:3030/v2/dreamcloud/mf/workflows/ms2\",\n}",
+          "content": "HTTP/1.1 200 OK\n{\n  \"href\": \"http://mf.excess-project.eu:3030/v1/dreamcloud/mf/workflows/ms2\",\n}",
           "type": "json"
         }
       ]
@@ -3695,14 +3695,14 @@ define({ "api": [
         }
       ]
     },
-    "filename": "routes/v2/dreamcloud/workflows.js",
+    "filename": "routes/v1/dreamcloud/workflows.js",
     "groupTitle": "Workflows"
   },
   {
     "type": "put",
     "url": "/workflows/:workflowID/:experimentID",
     "title": "5. Register a new workflow and experiment using custom IDs",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "name": "PutWorkflowIDExperimentID",
     "group": "Workflows",
     "parameter": {
@@ -3784,7 +3784,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example usage:",
-        "content": "curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/workflows/ms2/myUniqueID",
+        "content": "curl -i http://mf.excess-project.eu:3030/v1/dreamcloud/mf/workflows/ms2/myUniqueID",
         "type": "curl"
       }
     ],
@@ -3838,7 +3838,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "HTTP/1.1 200 OK\n{\n  \"workflow\": {\n    \"id\":   \"ms2\",\n    \"href\": \"http://mf.excess-project.eu:3030/v2/workflows/ms2\"\n  },\n  \"experiment\": {\n    \"id\":   \"myUniqueID\",\n    \"href\": \"http://mf.excess-project.eu:3030/v2/experiments/myUniqueID?workflow=ms2\"\n  }\n}",
+          "content": "HTTP/1.1 200 OK\n{\n  \"workflow\": {\n    \"id\":   \"ms2\",\n    \"href\": \"http://mf.excess-project.eu:3030/v1/workflows/ms2\"\n  },\n  \"experiment\": {\n    \"id\":   \"myUniqueID\",\n    \"href\": \"http://mf.excess-project.eu:3030/v1/experiments/myUniqueID?workflow=ms2\"\n  }\n}",
           "type": "json"
         }
       ]
@@ -3862,7 +3862,7 @@ define({ "api": [
         }
       ]
     },
-    "filename": "routes/v2/dreamcloud/workflows.js",
+    "filename": "routes/v1/dreamcloud/workflows.js",
     "groupTitle": "Workflows"
   }
 ] });
