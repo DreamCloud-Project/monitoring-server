@@ -957,11 +957,20 @@
         "Parameter": [
           {
             "group": "Parameter",
+            "type": "String",
             "optional": false,
-            "description": ""
+            "field": "none",
+            "description": "<p>no parameters required</p>"
           }
         ],
         "body": [
+          {
+            "group": "body",
+            "type": "String",
+            "optional": false,
+            "field": "WorkflowID",
+            "description": "<p>identifier of a workflow</p>"
+          },
           {
             "group": "body",
             "type": "String",

@@ -9,7 +9,7 @@ var router = express.Router();
  * @apiName PostBulkMetrics
  * @apiGroup Metrics
  *
- * @apiParam
+ * @apiParam {String} none no parameters required
  * @apiParam (body) {String} WorkflowID identifier of a workflow
  * @apiParam (body) {String} ExperimentID identifier of an experiment
  * @apiParam (body) {String} [TaskID] identifier of a task, equals '_all' if not set
