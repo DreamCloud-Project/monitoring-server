@@ -9,6 +9,8 @@ var secure_router = express.Router(),
  * @apiName GetResources
  * @apiGroup Resources
  *
+ * @apiParam {String} none none parameters required
+ *
  * @apiExample {curl} Example usage:
  *     curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/resources
  *
@@ -115,6 +117,8 @@ function get_resource(mf_server, results) {
  * @apiName GetResource
  * @apiGroup Resources
  *
+ * @apiParam {String} platformID platform-specific identifier, e.g., 'excesscluster'
+ *
  * @apiExample {curl} Example usage:
  *     curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/resources/excesscluster
  *
@@ -145,12 +149,6 @@ function get_resource(mf_server, results) {
  *              ]
  *           }
  *        ]
- *     }
- *
- * @apiSuccessExample Success-Response:
- *     HTTP/1.1 200 OK
- *     {
- *        "href": "http://mf.excess-project.eu:3030/v2/dreamcloud/mf/resources/excesscluster"
  *     }
  *
  * @apiError InternalServerError Likely to be caused by an error while inserting data into the database.
@@ -187,6 +185,9 @@ open_router.get('/:id', function(req, res, next) {
  * @apiName PutResource
  * @apiGroup Resources
  *
+ * @apiParam {String} none no parameters required
+ * @apiParam (body) {Object} nodes object aggregating some platform-specific information
+ *
  * @apiExample {curl} Example usage:
  *     curl -i http://mf.excess-project.eu:3030/v2/dreamcloud/mf/resources/excesscluster
  *
@@ -218,6 +219,13 @@ open_router.get('/:id', function(req, res, next) {
  *              ]
  *           }
  *        ]
+ *     }
+ *
+ * @apiSuccessExample Success-Response:
+ *     HTTP 200/OK
+ *     {
+ *       "href": "http://mf.excess-project.eu:3030/v1/dreamcloud/mf/resources/excesscluster"
+ *
  *     }
  *
  * @apiError InternalServerError Likely to be caused by an error while inserting data into the database.
